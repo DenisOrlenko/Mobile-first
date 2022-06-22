@@ -68,13 +68,12 @@
 
 
   @media screen and (min-width:1200px) {
-
     flex-basis: calc(100% / 3 - var(--list-gap));
-    margin-left: var(--list-gap);
+    margin-bottom: 30px;
 
-
-    text-align: center;
-
+    &:last-child {
+        margin-bottom: 30px;
+    }
   }
 }
 

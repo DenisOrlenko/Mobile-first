@@ -46,6 +46,10 @@ body {
   margin-right: auto;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Заголовки и обзацы - убираю вертикальные отступы */
 h1,
 h2,

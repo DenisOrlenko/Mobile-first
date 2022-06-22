@@ -5,24 +5,28 @@
   position: relative;
 }
 
-// .page-header.container {
-//     position: relative;
-// }
+.page-header.container {
+    @media screen and (min-width:1200px) {
+      position: relative;
+    }
+}
 
 
-// .page-header .container {
-//   display: flex;
-//   align-items: center;
+.page-header .container {
+  @media screen and (min-width:1200px) {
+    display: flex;
+    align-items: center;
 
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     border-bottom: 1px solid var(--border-under-header);
-//     width: 100%;
-//   }
-// }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom: 1px solid var(--border-under-header);
+      width: 100%;
+    }
+  }
+}
 
 .page-header__nav {
   display: flex;
