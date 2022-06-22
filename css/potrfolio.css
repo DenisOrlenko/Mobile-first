@@ -37,6 +37,10 @@ body {
   margin-right: auto;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Заголовки и обзацы - убираю вертикальные отступы */
 h1,
 h2,
@@ -110,6 +114,27 @@ h3 {
   position: relative;
 }
 
+@media screen and (min-width: 1200px) {
+  .page-header.container {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header .container {
+    display: flex;
+    align-items: center;
+  }
+  .page-header .container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid var(--border-under-header);
+    width: 100%;
+  }
+}
+
 .page-header__nav {
   display: flex;
   align-items: center;
@@ -146,6 +171,12 @@ h3 {
   background-color: red;
 }
 
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+}
+
 .button-menu .icon-cross {
   display: none;
 }
@@ -158,39 +189,54 @@ h3 {
   display: none;
 }
 
-/* Contact */
-.contact {
+.site-nav {
   display: flex;
-  margin-left: auto;
+  margin-left: 93px;
 }
 
-.contact__item + .contact__item {
+.site-nav > .site-nav__item {
+  position: relative;
+}
+
+.site-nav .site-nav__item + .site-nav__item {
   margin-left: 50px;
 }
 
-/* задается цвет списку контактов в шапке */
-.contact__link {
-  display: flex;
-  align-items: center;
+/* site-nav цвет списка ссылок */
+.site-nav__link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: var(--primary-text-color);
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* задается цвет подсвечивания ссылки при наведении курсором */
+  /* site-nav цвет ссылки при наведении */
 }
 
-.contact__link:hover, .contact__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.contact__icon {
-  fill: currentColor;
-  margin-right: 10px;
+/* current - Позиционирование открытой ссылки на текущей странице*/
+.site-nav__link--current {
+  color: var(--accent-color);
+  /* нижнее подчеркивание текущей вкладки*/
+}
+
+.site-nav__link--current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .menu-container {
@@ -305,8 +351,10 @@ h3 {
 @media screen and (min-width: 1200px) {
   .example-list__item {
     flex-basis: calc(100% / 3 - var(--list-gap));
-    margin-left: var(--list-gap);
-    text-align: center;
+    margin-bottom: 30px;
+  }
+  .example-list__item:last-child {
+    margin-bottom: 30px;
   }
 }
 
