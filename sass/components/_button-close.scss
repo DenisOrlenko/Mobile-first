@@ -1,5 +1,7 @@
 .button-close {
   position: absolute;
+  // right: 8px;
+  // top: 8px;
   right: 23px;
   top: 101px;
   // right: 5px;
@@ -23,5 +25,10 @@
   &:hover,
   &:focus {
     fill: var(--accent-color);
+  }
+
+  @media screen and (min-width:480px) {
+    right: 8px;
+    top: 8px;
   }
 }
