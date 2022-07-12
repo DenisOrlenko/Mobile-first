@@ -108,19 +108,15 @@ h3 {
   clip: rect(0 0 0 0);
 }
 
-.page-header {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-@media screen and (min-width: 1200px) {
-  .page-header.container {
+@media screen and (max-width: 767px) {
+  .page-header {
+    margin-bottom: 16px;
+    margin-top: 16px;
     position: relative;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .page-header .container {
     display: flex;
     align-items: center;
@@ -153,6 +149,13 @@ h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 /* WebStudio - черный цвет */
@@ -191,27 +194,54 @@ h3 {
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
 }
 
-.site-nav > .site-nav__item {
-  position: relative;
+@media screen and (max-width: 767px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 302px;
+  }
 }
 
-.site-nav .site-nav__item + .site-nav__item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item + .site-nav__item {
+    margin-left: 50px;
+  }
 }
 
 /* site-nav цвет списка ссылок */
 .site-nav__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.18;
   letter-spacing: 0.02em;
   text-decoration: none;
   /* site-nav цвет ссылки при наведении */
@@ -221,38 +251,146 @@ h3 {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
 /* current - Позиционирование открытой ссылки на текущей странице*/
-.site-nav__link--current {
+@media screen and (min-width: 768px) {
+  .site-nav__link--current {
+    color: var(--accent-color);
+    /* нижнее подчеркивание текущей вкладки*/
+  }
+  .site-nav__link--current::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
+
+/* Contact */
+.contact {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    margin-left: 84px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    margin-left: 305px;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__item + .contact__item {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact__item:last-child {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+/* задается цвет списку контактов в шапке */
+.contact__link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* задается цвет подсвечивания ссылки при наведении курсором */
+}
+
+.contact__link:hover, .contact__link:focus {
   color: var(--accent-color);
-  /* нижнее подчеркивание текущей вкладки*/
 }
 
-.site-nav__link--current::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .contact__link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
-.menu-container {
-  background-color: #7e6c6c;
-  padding: 48px 83px 48px 40px;
-  text-align: center;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 796px;
-  display: none;
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
-.menu-container.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .contact__icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    background-color: var(--primary-bg-color);
+    padding: 48px 83px 48px 40px;
+    text-align: center;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* Центрирование - HERO, BUTTON, фон Героя */
@@ -312,6 +450,12 @@ h3 {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 208px 159px 207px 159px;
+  }
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -319,17 +463,37 @@ h3 {
 }
 
 .modal {
+  width: 100%;
+  max-width: 450px;
+  max-height: 609px;
   padding: 40px;
   background-color: var(--primary-bg-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 481px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
+}
+
 .modal__title {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.5;
   text-align: center;
   color: #212121;
 }
@@ -355,8 +519,10 @@ h3 {
   fill: var(--accent-color);
 } */
 .modal-form__label {
+  display: block;
+  margin-bottom: 4px;
   font-size: 12px;
-  line-height: 1.16px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 }
@@ -367,9 +533,9 @@ h3 {
 .modal-form__input {
   padding: 11px 12px 11px 42px;
   width: 100%;
-  margin-top: 4px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -382,7 +548,7 @@ h3 {
 .modal-form__icon {
   position: absolute;
   left: 12px;
-  top: 35px;
+  bottom: 11px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -391,16 +557,27 @@ h3 {
 }
 
 /* ----------------------form-comment------------------------ */
+.comment {
+  height: 138px;
+  margin-bottom: 20px;
+}
+
 .comment__label {
   display: inline-block;
   margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
 
 .comment__textarea {
   width: 100%;
   padding: 12px 16px 12px 16px;
-  margin-bottom: 20px;
   resize: none;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -437,6 +614,19 @@ h3 {
 .checkbox__label {
   display: flex;
   align-items: center;
+  height: 14px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox__icon-thumb {
@@ -456,11 +646,6 @@ h3 {
 
 .checkbox__link {
   color: var(--accent-color);
-}
-
-.send-modal-group {
-  padding-left: 124px;
-  padding-right: 124px;
 }
 
 .send-modal-button {
@@ -491,6 +676,13 @@ h3 {
 
 .button-close:hover, .button-close:focus {
   fill: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .button-close {
+    right: 8px;
+    top: 8px;
+  }
 }
 
 /* feature */
