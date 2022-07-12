@@ -43,17 +43,6 @@
           <li class="site-nav__item">
             <a href="" class="site-nav__link">Контакты</a></li>
         </ul> -->
-        <button type="button"
-        class="page-header__button button-menu"
-        aria-expanded="true"
-        aria-controls="menu-container"
-        data-button-menu>
-          <svg class="button-menu__icon" width="24" height="16"
-          aria-label="Переключатель мобильного меню">
-            <use href="./images/svg/icons.svg#icon-button-close" class="icon-cross"></use>
-            <use href="./images/svg/icons.svg#icon-menu-mobile" class="icon-menu"></use>
-          </svg>
-        </button>
 
         <div class="menu-container" id="menu-container" data-menu>
           <ul class="site-nav list">
@@ -85,6 +74,20 @@
             </li>
           </ul>
         </div>
+
+        <button type="button"
+        class="page-header__button button-menu"
+        aria-expanded="true"
+        aria-controls="menu-container"
+        data-button-menu>
+          <svg class="button-menu__icon" width="24" height="16"
+          aria-label="Переключатель мобильного меню">
+            <use href="./images/svg/icons.svg#icon-button-close" class="icon-cross"></use>
+            <use href="./images/svg/icons.svg#icon-menu-mobile" class="icon-menu"></use>
+          </svg>
+        </button>
+
+
       </nav>
       <!-- КОНТАКТЫ -->
       <!-- <ul class="contact list">
@@ -504,7 +507,7 @@
 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="button-close" data-modal-close>
+      <button type="button" class="button-close" data-modal-close>
         <svg class="button-close__icon" width="11" height="11">
           <use href="./images/svg/icons.svg#icon-button-close"></use>
         </svg>
@@ -540,7 +543,7 @@
 
         <div class="comment">
           <label class="comment__label" for="comment">Комментарий</label>
-          <textarea class="comment__textarea" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+          <textarea class="comment__textarea" name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
         </div>
 
         <div class="checkbox-group">
