@@ -108,26 +108,29 @@ h3 {
   clip: rect(0 0 0 0);
 }
 
+.page-header {
+  position: relative;
+}
+
 @media screen and (max-width: 767px) {
   .page-header {
     margin-bottom: 16px;
     margin-top: 16px;
-    position: relative;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .page-header .container {
-    display: flex;
-    align-items: center;
-  }
+.page-header .container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid var(--border-under-header);
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
   .page-header .container::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-bottom: 1px solid var(--border-under-header);
-    width: 100%;
+    bottom: -16px;
   }
 }
 
@@ -188,8 +191,16 @@ h3 {
   display: block;
 }
 
+.button-menu.is-open .icon-cross:hover, .button-menu.is-open .icon-cross:focus {
+  fill: var(--accent-color);
+}
+
 .button-menu.is-open .icon-menu {
   display: none;
+}
+
+.button-menu__icon {
+  z-index: 1;
 }
 
 .site-nav {
@@ -380,6 +391,7 @@ h3 {
     background-color: var(--primary-bg-color);
     padding: 48px 83px 48px 40px;
     text-align: center;
+    z-index: 1;
   }
   .menu-container.is-open {
     display: block;
@@ -393,18 +405,53 @@ h3 {
   }
 }
 
+.directions {
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .directions {
+    padding-top: 94px;
+  }
+}
+
 .directions__list {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-  margin-right: -8px;
-  margin-top: -15px;
+  margin-bottom: 40px;
   justify-content: center;
 }
 
-.directions__item {
-  margin-right: 8px;
-  margin-top: 15px;
+@media screen and (max-width: 767px) {
+  .directions__list {
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-top: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .directions__list {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .directions__list {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .directions__item {
+    margin-right: 8px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .directions__item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 /* button применение формления к кнопке */
