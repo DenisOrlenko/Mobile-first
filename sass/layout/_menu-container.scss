@@ -12,6 +12,8 @@
     padding: 48px 83px 48px 40px;
     text-align: center;
 
+    z-index: 1;
+
     &.is-open {
       display: block;
     }

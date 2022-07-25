@@ -15,9 +15,22 @@
 
 .button-menu.is-open .icon-cross {
   display: block;
+
+  &:hover,
+  &:focus {
+      fill: var(--accent-color);
+    }
 }
 
 .button-menu.is-open .icon-menu {
   display: none;
+}
 
+.button-menu__icon {
+  z-index: 1;
+
+  // &:hover,
+  // &:focus {
+  //     fill: var(--accent-color);
+  // }
 }

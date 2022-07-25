@@ -1,11 +1,30 @@
+.directions {
+  padding-top: 60px;
+
+  @media screen and (min-width:1200px) {
+    padding-top: 94px;
+  }
+}
+
 .directions__list {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-  margin-right: -8px;
-  margin-top: -15px;
-
+  margin-bottom: 40px;
   justify-content: center;
+
+  @media screen and (max-width:767px) {
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-top: -15px;
+    }
+
+  @media screen and (min-width:768px) {
+    margin-bottom: 30px;
+  }
+
+
+    @media screen and (min-width:1200px) {
+      margin-bottom: 50px;
+    }
 }
 
 // .directions__item {
@@ -14,8 +33,16 @@
 // }
 
 .directions__item {
-  margin-right: 8px;
-  margin-top: 15px;
+  @media screen and (max-width:767px) {
+    margin-right: 8px;
+    margin-top: 15px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width:768px) {
+      margin-right: 8px;
+    }
+  }
 }
 
 /* button применение формления к кнопке */
