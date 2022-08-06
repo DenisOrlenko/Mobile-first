@@ -174,7 +174,6 @@ h3 {
 .button-menu {
   display: inline-flex;
   border: none;
-  background-color: red;
 }
 
 @media screen and (min-width: 768px) {
@@ -189,10 +188,6 @@ h3 {
 
 .button-menu.is-open .icon-cross {
   display: block;
-}
-
-.button-menu.is-open .icon-cross:hover, .button-menu.is-open .icon-cross:focus {
-  fill: var(--accent-color);
 }
 
 .button-menu.is-open .icon-menu {
@@ -211,7 +206,6 @@ h3 {
   .site-nav {
     flex-direction: column;
     align-items: start;
-    margin-bottom: 302px;
   }
 }
 
@@ -380,6 +374,10 @@ h3 {
   }
 }
 
+.menu-container {
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
@@ -394,7 +392,9 @@ h3 {
     z-index: 1;
   }
   .menu-container.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -621,6 +621,13 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .page-footer .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 .page-footer__logo {
   display: block;
   margin-bottom: 20px;
@@ -631,6 +638,12 @@ h3 {
   .logo-address-thumb {
     display: inline-flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-address-thumb {
+    min-width: 231px;
   }
 }
 
@@ -727,9 +740,9 @@ h3 {
 }
 
 /* -------------form-footer------------------ */
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .sign-up {
-    display: inline-flex;
+    display: flex;
     margin-left: 93px;
   }
 }
@@ -738,7 +751,7 @@ h3 {
   text-align: center;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .sign-up__field {
     display: inline-flex;
     flex-direction: column;
