@@ -1,3 +1,3 @@
-# Mobile-first-copy
+# Mobile-first
 
-Mobile-first-copy
+Mobile-first
