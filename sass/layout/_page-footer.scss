@@ -16,10 +16,10 @@
     padding-left: 76px;
   }
 
-  // @media screen and (min-width:1170px) {
-  //   display: flex;
-  //   align-items: baseline;
-  // }
+  @media screen and (min-width:1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 // desktop
@@ -47,9 +47,9 @@
     flex-direction: column;
   }
 
-  // @media screen and (min-width:1170px) {
-  //   min-width: 231px;
-  // }
+  @media screen and (min-width:1200px) {
+    min-width: 231px;
+  }
 }
 
 .social-thumb {

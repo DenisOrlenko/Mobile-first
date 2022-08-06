@@ -2,7 +2,6 @@
   display: inline-flex;
 
   border: none;
-  background-color: red;
 
   @media screen and (min-width:768px) {
     display: none;
@@ -15,11 +14,6 @@
 
 .button-menu.is-open .icon-cross {
   display: block;
-
-  &:hover,
-  &:focus {
-      fill: var(--accent-color);
-    }
 }
 
 .button-menu.is-open .icon-menu {
@@ -28,9 +22,5 @@
 
 .button-menu__icon {
   z-index: 1;
-
-  // &:hover,
-  // &:focus {
-  //     fill: var(--accent-color);
-  // }
 }
+
