@@ -96,6 +96,10 @@ h3 {
   list-style: none;
 }
 
+.image {
+  display: block;
+}
+
 /* Скрываю заголовок визуально (в CSS оформлении) */
 .visually-hidden {
   position: absolute;
@@ -108,40 +112,35 @@ h3 {
   clip: rect(0 0 0 0);
 }
 
-.page-header {
-  position: relative;
-}
-
 @media screen and (max-width: 767px) {
   .page-header {
-    margin-bottom: 16px;
-    margin-top: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
-.page-header .container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid var(--border-under-header);
-  width: 100%;
-}
-
-@media screen and (max-width: 767px) {
-  .page-header .container::after {
-    bottom: -16px;
-  }
-}
-
-.page-header__nav {
+.page-header .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.page-header__button {
-  margin-left: 284px;
-  padding: 0;
+@media screen and (min-width: 768px) {
+  .page-header .container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid var(--border-under-header);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header__nav {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* .logo-web */
@@ -152,6 +151,7 @@ h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 1200px) {
@@ -171,39 +171,21 @@ h3 {
   color: var(--secondary-text-color);
 }
 
-.button-menu {
-  display: inline-flex;
-  border: none;
-}
-
 @media screen and (min-width: 768px) {
-  .button-menu {
+  .page-header__button {
     display: none;
   }
 }
 
-.button-menu .icon-cross {
-  display: none;
-}
-
-.button-menu.is-open .icon-cross {
-  display: block;
-}
-
-.button-menu.is-open .icon-menu {
-  display: none;
-}
-
-.button-menu__icon {
-  z-index: 1;
-}
-
-.site-nav {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .page-header .site-nav {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .site-nav {
+    display: flex;
     flex-direction: column;
     align-items: start;
   }
@@ -211,6 +193,7 @@ h3 {
 
 @media screen and (min-width: 768px) {
   .site-nav {
+    display: flex;
     margin-left: 88px;
   }
 }
@@ -285,25 +268,29 @@ h3 {
 }
 
 /* Contact */
-.contact {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .page-header .contact {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .contact {
     flex-direction: column-reverse;
+    margin-bottom: 64px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact {
     margin-left: 84px;
-    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contact {
+    display: flex;
+    flex-direction: row;
     margin-left: 305px;
     align-items: center;
   }
@@ -316,7 +303,7 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
-  .contact__item:last-child {
+  .contact__item:first-child {
     margin-bottom: 32px;
   }
 }
@@ -345,6 +332,13 @@ h3 {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 767px) {
+  .contact > .contact__item:first-child > .contact__link {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contact__link {
     font-size: 12px;
@@ -361,12 +355,6 @@ h3 {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .contact__icon {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .contact__icon {
     fill: currentColor;
@@ -375,26 +363,25 @@ h3 {
 }
 
 .menu-container {
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
+  padding: 48px 83px 48px 40px;
+  background-color: var(--primary-bg-color);
+  text-align: center;
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
-  .menu-container {
-    display: none;
-    position: absolute;
-    top: -16px;
-    left: 0;
-    width: 100%;
-    height: 796px;
-    background-color: var(--primary-bg-color);
-    padding: 48px 83px 48px 40px;
-    text-align: center;
-    z-index: 1;
-  }
   .menu-container.is-open {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform: translateX(0);
   }
 }
 
@@ -403,6 +390,36 @@ h3 {
     display: flex;
     align-items: center;
   }
+}
+
+.menu-container__nav {
+  margin-bottom: 302px;
+}
+
+/* задается цвет подсвечивания ссылки при наведении курсором */
+.menu-toggle {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-toggle:hover, .menu-toggle:focus {
+    fill: var(--accent-color);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-toggle__icon-menu {
+    display: flex;
+  }
+}
+
+.menu-container__button {
+  position: absolute;
+  top: 21px;
+  right: 25px;
 }
 
 .directions {
