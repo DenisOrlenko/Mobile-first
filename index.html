@@ -31,93 +31,24 @@
     <!-- HEADER -->
     <div class="container">
       <nav class="page-header__nav">
-        <a class="logo page-header__logo" href="./index.html">Web<span class="logo__studio logo__studio--accent-black">Studio</span>
+        <!-- logo -->
+        <a class="logo page-header__logo link" href="./index.html">Web<span class="logo__studio logo__studio--accent-black">Studio</span>
         </a>
-        <!-- <ul class="site-nav list">
+
+        <!-- КОНТАКТЫ-навигация -->
+        <ul class="site-nav list">
           <li class="site-nav__item">
-            <a href="" class="site-nav__link site-nav__link--current">Студия</a>
+            <a href="" class="site-nav__link site-nav__link--current link">Студия</a>
           </li>
           <li class="site-nav__item">
-            <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+            <a href="./portfolio.html" class="site-nav__link link">Портфолио</a>
           </li>
           <li class="site-nav__item">
-            <a href="" class="site-nav__link">Контакты</a></li>
-        </ul> -->
-
-        <div class="menu-container" id="menu-container" data-menu>
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link site-nav__link--current">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
-            </li>
-          </ul>
-
-          <ul class="contact list">
-            <li class="contact__item item">
-              <a href="mailto:info@devstudio.com" class="contact__link link">
-                <svg class="contact__icon" width="16" height="12">
-                  <use href="./images/svg/icons.svg#icon-envelope-hover"></use>
-                </svg>
-                info@devstudio.com</a>
-            </li>
-            <li class="contact__item item">
-              <a href="tel:+380961111111" class="contact__link link">
-                <svg class="contact__icon" width="10" height="16">
-                  <use href="./images/svg/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a>
-            </li>
-          </ul>
-
-          <ul class="social-mobile list">
-            <li class="social-mobile__item item">
-              <a class="social-mobile__link link" href="">Instagram</a>
-              <span class="social-mobile__link-slash"></span>
-
-            </li>
-            <li class="social-mobile__item item">
-              <a class="social-mobile__link link" href="">Twitter</a>
-              <span class="social-mobile__link-slash"></span>
-            </li>
-            <li class="social-mobile__item item">
-              <a class="social-mobile__link link" href="">Facebook</a>
-              <span class="social-mobile__link-slash"></span>
-            </li>
-            <li class="social-mobile__item item">
-              <a class="social-mobile__link link" href="">LinkedIn</a>
-            </li>
-
-          </ul>
-          <!-- <button type="button" class="page-header__button button-menu" aria-expanded="true" aria-controls="menu-container"
-            data-button-menu>
-            <svg class="button-menu__icon" width="24" height="16" aria-label="Переключатель мобильного меню">
-              <use href="./images/svg/icons.svg#icon-button-close" class="icon-cross"></use>
-              <use href="./images/svg/icons.svg#icon-menu-mobile" class="icon-menu"></use>
-            </svg>
-          </button> -->
-        </div>
-
-        <button type="button"
-        class="page-header__button button-menu"
-        aria-expanded="true"
-        aria-controls="menu-container"
-        data-button-menu>
-          <svg class="button-menu__icon" width="24" height="16"
-          aria-label="Переключатель мобильного меню">
-            <use href="./images/svg/icons.svg#icon-button-close" class="icon-cross"></use>
-            <use href="./images/svg/icons.svg#icon-menu-mobile" class="icon-menu"></use>
-          </svg>
-        </button>
-
-
+            <a href="" class="site-nav__link link">Контакты</a></li>
+        </ul>
       </nav>
-      <!-- КОНТАКТЫ -->
-      <!-- <ul class="contact list">
+
+      <ul class="contact list">
         <li class="contact__item item">
           <a href="mailto:info@devstudio.com" class="contact__link link">
             <svg class="contact__icon" width="16" height="12">
@@ -127,14 +58,24 @@
         </li>
         <li class="contact__item item">
           <a href="tel:+380961111111" class="contact__link link">
-            <svg class="contact__icon" width="10" height="16">
+            <svg class="contact__icon" width="10" height="14">
               <use href="./images/svg/icons.svg#icon-smartphone"></use>
             </svg>
-            +38 096 111 11 11</a>
+            +38 096 111 11 11
+          </a>
         </li>
-      </ul> -->
+      </ul>
+
+      <button type="button" class="page-header__button menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        <svg class="menu-toggle__icon-menu" width="24" height="16" aria-label="Переключатель мобильного меню">
+          <use href="./images/svg/icons.svg#icon-menu-mobile" class="icon-menu"></use>
+        </svg>
+      </button>
     </div>
   </header>
+
   <main>
     <!-- Герой -->
     <section class="hero section">
@@ -200,21 +141,21 @@
           <li class="version-item">
             <h3 class="version-item__title">Десктопные приложения</h3>
             <div class="version-item__thumb">
-              <img src="./images/main/desktop-img/Десктопная версия.jpg" alt="Разработка версии для компьютера ">
+              <img class="image" src="./images/main/desktop-img/version/desktop-version.jpg" alt="Разработка версии для компьютера ">
             </div>
           </li>
 
           <li class="version-item">
             <h3 class="version-item__title">Мобильные приложения</h3>
             <div class="version-item__thumb">
-              <img src="./images/main/desktop-img/Мобильная версия.jpg" alt="Разработка версии для компьютера ">
+              <img class="image" src="./images/main/desktop-img/version/mobile-version.jpg" alt="Разработка версии для компьютера ">
             </div>
           </li>
 
           <li class="version-item">
-            <h3 class="version-item__title">Десктопные приложения</h3>
+            <h3 class="version-item__title">Дизайнерские решения</h3>
             <div class="version-item__thumb">
-              <img src="./images/main/desktop-img/Планшет.jpg" alt="Разработка версии для компьютера ">
+              <img class="image" src="./images/main/desktop-img/version/design-version.jpg" alt="Разработка версии для компьютера ">
             </div>
           </li>
         </ul>
@@ -225,8 +166,26 @@
       <div class="container">
         <h2 class="masters__title section-title">Наша команда</h2>
         <ul class="masters__list list">
+
           <li class="masters-item">
-            <img class="masters-item__image" src="./images/main/mobile-img/Игорь-mobile.jpg" alt="Дизайнер продукции" width="450" height="460" />
+
+            <div class="masters-item__thumb">
+              <picture>
+                <source
+                  srcset="./images/main/desktop-img/masters/product-desktop.jpg 1x, ./images/main/desktop-img/masters/product-desktop-2x.jpg 2x"
+                  media="(min-width:1200px)">
+
+                <source
+                  srcset="./images/main/tablet-img/masters/product-tablet.jpg 1x, ./images/main/tablet-img/masters/product-tablet-2x.jpg 2x"
+                  media="(min-width:768px)">
+
+                <img class="masters-item__image image"
+                srcset="./images/main/mobile-img/masters/product-mobile.jpg 1x, ./images/main/mobile-img/masters/product-mobile-2x.jpg 2x"
+                src="./images/main/mobile-img/masters/product-mobile.jpg"
+                alt="Продакт"/>
+              </picture>
+            </div>
+
             <div class="masters-item__content">
               <h3 class="masters-item__title">Игорь Демьяненко</h3>
               <p class="masters-item__text" lang="en">Product Designer</p>
@@ -266,7 +225,12 @@
             </div>
           </li>
           <li class="masters-item">
-            <img class="masters-item__image" src="./images/main/mobile-img/Ольга-mobile.jpg" alt="Фронтенд-разработчик" width="450" height="460" />
+            <div class="masters-item__thumb">
+              <img class="masters-item__image image"
+              src="./images/main/mobile-img/masters/frontend-mobile.jpg"
+              alt="Фронтенд-разработчик" />
+            </div>
+
             <div class="masters-item__content">
               <h3 class="masters-item__title">Ольга Репина</h3>
               <p class="masters-item__text" lang="en">Product Designer</p>
@@ -307,7 +271,12 @@
           </li>
 
           <li class="masters-item">
-            <img class="masters-item__image" src="./images/main/mobile-img/Николай-mobile.jpg" alt="Маркетолог" width="450" height="460" />
+            <div class="masters-item__thumb">
+              <img class="masters-item__image image"
+              src="./images/main/mobile-img/masters/marketing-mobile.jpg"
+              alt="Маркетолог" />
+            </div>
+
             <div class="masters-item__content">
               <h3 class="masters-item__title">Николай Тарасов</h3>
               <p class="masters-item__text" lang="en">Marketing</p>
@@ -348,7 +317,12 @@
           </li>
 
           <li class="masters-item">
-            <img class="masters-item__image" src="./images/main/mobile-img/Михаил-mobile.jpg" alt="Дизайнер пользовательского интерфейса" width="450" height="460" />
+            <div class="masters-item__thumb">
+              <img class="masters-item__image image"
+              src="./images/main/mobile-img/masters/design-mobile.jpg"
+              alt="Дизайнер пользовательского интерфейса" />
+            </div>
+
             <div class="masters-item__content">
               <h3 class="masters-item__title">Михаил Ермаков</h3>
               <p class="masters-item__text" lang="en">UI Designer</p>
@@ -535,6 +509,61 @@
     </div>
   </footer>
 
+  <!-- Mobile-menu -->
+  <div class="menu-container js-menu-container"  id="mobile-menu">
+    <button type="button" class="menu-container__button menu-toggle js-close-menu" >
+      <svg class="menu-toggle__icon-close" width="24" height="16" aria-label="Переключатель мобильного меню">
+        <use href="./images/svg/icons.svg#icon-button-close" class="icon-cross"></use>
+      </svg>
+    </button>
+
+    <nav class="menu-container__nav">
+      <ul class="site-nav list">
+        <li class="site-nav__item">
+          <a href="" class="site-nav__link link">Студия</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="./portfolio.html" class="site-nav__link link">Портфолио</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="" class="site-nav__link link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="contact list">
+      <li class="contact__item item">
+        <a href="mailto:info@devstudio.com" class="contact__link link">
+          info@devstudio.com</a>
+      </li>
+      <li class="contact__item item">
+        <a href="tel:+380961111111" class="contact__link link">
+          +38 096 111 11 11</a>
+      </li>
+    </ul>
+
+    <ul class="social-mobile list">
+      <li class="social-mobile__item item">
+        <a class="social-mobile__link link" href="">Instagram</a>
+        <span class="social-mobile__link-slash"></span>
+
+      </li>
+      <li class="social-mobile__item item">
+        <a class="social-mobile__link link" href="">Twitter</a>
+        <span class="social-mobile__link-slash"></span>
+      </li>
+      <li class="social-mobile__item item">
+        <a class="social-mobile__link link" href="">Facebook</a>
+        <span class="social-mobile__link-slash"></span>
+      </li>
+      <li class="social-mobile__item item">
+        <a class="social-mobile__link link" href="">LinkedIn</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- Modal -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button type="button" class="button-close" data-modal-close>
@@ -596,8 +625,19 @@
       </form>
     </div>
 
+
+    <!-- Mobile-menu-script -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+  crossorigin="anonymous">
+</script>
+
+<script defer src="js/mobile-menu.js"></script>
+
+
+    <!-- Modal-script  -->
 <script src="./js/modal.js"></script>
-<script src="./js/menu-mobile.js"></script>
+
 
 </body>
 
