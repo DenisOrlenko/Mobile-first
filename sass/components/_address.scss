@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.address__item {
+  height: 21px;
+}
+
 .address__item:not(:last-child) {
   margin-bottom: 8px;
 }

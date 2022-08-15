@@ -1,5 +1,9 @@
 /* -------------form-footer------------------ */
 .sign-up {
+  @media screen and (min-width:768px) and (max-width:1199px) {
+    margin-top: 60px;
+  }
+
   @media screen and (min-width:1200px) {
     display: flex;
     // display: inline-flex;
@@ -17,10 +21,11 @@
   // align-items: flex-start;
 
   @media screen and (min-width:1200px) {
-    display: inline-flex;
-    flex-direction: column;
-    // margin-left: 93px;
-    text-align: start;
+    text-align: unset;
+  //   display: inline-flex;
+  //   flex-direction: column;
+  //   // margin-left: 93px;
+  //   text-align: start;
   }
 }
 
@@ -31,6 +36,11 @@
   text-transform: uppercase;
 
   color: var(--secondary-text-color);
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .sign-up__input {
