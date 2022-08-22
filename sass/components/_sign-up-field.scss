@@ -68,8 +68,9 @@
     // background-color: var(--accent-color);
   }
 
-  @media screen and (min-width:1170px) {
+  @media screen and (min-width:1200px) {
     min-width: 358px;
+    margin-bottom: auto;
   }
 }
 
@@ -87,7 +88,6 @@
   padding-right: 62px;
 
   @media screen and (min-width:1170px) {
-    margin-bottom: 20px;
     margin-top: auto;
     margin-left: 12px;
   }
