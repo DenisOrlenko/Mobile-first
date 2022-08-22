@@ -769,9 +769,10 @@ h3 {
   border: 1px solid var(--secondary-text-color);
   color: var(--secondary-text-color);
 }
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .sign-up__input {
     min-width: 358px;
+    margin-bottom: auto;
   }
 }
 
@@ -787,7 +788,6 @@ h3 {
 }
 @media screen and (min-width: 1170px) {
   .sign-up__button {
-    margin-bottom: 20px;
     margin-top: auto;
     margin-left: 12px;
   }
