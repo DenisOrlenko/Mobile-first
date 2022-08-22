@@ -14,6 +14,7 @@
   @media screen and (min-width:768px) and (max-width:1199px) {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     padding-right: 89px;
     padding-left: 76px;
   }
@@ -58,8 +59,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    padding-top: 5px;
     margin-left: 165px;
-    margin-bottom: 33px;
+    // margin-bottom: 33px;
   }
 
   @media screen and (min-width:1200px) {

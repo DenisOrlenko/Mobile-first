@@ -37,10 +37,10 @@
 
   color: var(--secondary-text-color);
 
-  @media screen and (min-width:1200px) {
-    display: flex;
-    flex-direction: column;
-  }
+  // @media screen and (min-width:1200px) {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 }
 
 .sign-up__input {
@@ -87,7 +87,8 @@
   padding-right: 62px;
 
   @media screen and (min-width:1170px) {
-    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: auto;
     margin-left: 12px;
   }
 }
