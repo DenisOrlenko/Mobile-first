@@ -53,20 +53,3 @@
     min-width: 231px;
   }
 }
-
-.social-thumb {
-  @media screen and (min-width:768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding-top: 5px;
-    margin-left: 165px;
-    // margin-bottom: 33px;
-  }
-
-  @media screen and (min-width:1200px) {
-    margin-left: 70px;
-    // margin-bottom: 0;
-  }
-}
