@@ -1098,21 +1098,6 @@ h3 {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .social-thumb {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 5px;
-    margin-left: 165px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .social-thumb {
-    margin-left: 70px;
-  }
-}
-
 /* footer-contacts */
 .address {
   margin-bottom: 20px;
@@ -1145,6 +1130,21 @@ h3 {
 }
 
 /* socials */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .social-thumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5px;
+    margin-left: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social-thumb {
+    margin-left: 70px;
+  }
+}
+
 .social-footer-title {
   margin-bottom: 20px;
   color: var(--secondary-bg-color);
@@ -1215,7 +1215,7 @@ h3 {
 .sign-up-label {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
