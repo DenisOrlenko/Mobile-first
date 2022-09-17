@@ -47,8 +47,11 @@
   }
 
   @media screen and (min-width:1200px) {
-    height: 600px;
+    min-height: 600px;
     padding-top: 200px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
