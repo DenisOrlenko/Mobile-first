@@ -1,41 +1,42 @@
 .page-header .site-nav {
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }
 
 .site-nav {
-  @media screen and (max-width:767px) {
-  // display: none;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  @media screen and (max-width: 767px) {
+    // display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
   }
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     margin-left: 88px;
   }
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     margin-left: 93px;
   }
 }
 
 .site-nav__item {
-  @media screen and (max-width:767px) {
-    &:not(:last-child) {
-      margin-bottom: 32px;
-    }
-  }
+  // @media screen and (max-width:767px) {
+  //   &:not(:last-child) {
+  //     margin-bottom: 32px;
+  //   }
+  // }
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     position: relative;
   }
 }
 
 .site-nav__item + .site-nav__item {
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     margin-left: 50px;
   }
 }
@@ -59,7 +60,7 @@
     color: var(--accent-color);
   }
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -70,7 +71,7 @@
 
 /* current - Позиционирование открытой ссылки на текущей странице*/
 .site-nav__link--current {
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     color: var(--accent-color);
 
     /* нижнее подчеркивание текущей вкладки*/
@@ -89,5 +90,3 @@
     }
   }
 }
-
-

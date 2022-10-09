@@ -1,22 +1,22 @@
 /* Contact */
 .page-header .contact {
-    @media screen and (max-width:767px) {
-      display: none;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.menu-container__contact {
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
 }
 
 .contact {
-  @media screen and (max-width:767px) {
-    flex-direction: column-reverse;
-    margin-bottom: 64px;
-  }
-
-  @media screen and (min-width:768px) and (max-width:1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-left: 84px;
     // flex-direction: column;
   }
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
     margin-left: 305px;
@@ -25,25 +25,24 @@
 }
 
 .contact__item + .contact__item {
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     margin-left: 30px;
   }
 }
 
 .contact__item {
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     &:first-child {
       margin-bottom: 32px;
     }
   }
 
-  @media screen and (min-width:768px) and (max-width:1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     &:first-child {
       margin-bottom: 10px;
     }
   }
 }
-
 
 /* задается цвет списку контактов в шапке */
 .contact__link {
@@ -68,19 +67,19 @@
     color: var(--accent-color);
   }
 
-    .contact > .contact__item:first-child > & {
-      @media screen and (max-width:767px) {
-        font-size: 24px;
-        line-height: 1.17;
-      }
+  .contact > .contact__item:first-child > & {
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 1.17;
     }
+  }
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     font-size: 12px;
     line-height: 1.17;
   }
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -94,7 +93,7 @@
   //   display: none;
   // }
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     fill: currentColor;
     margin-right: 10px;
   }
